@@ -36,8 +36,8 @@ plot(xaxi,MGLU3LAST(1:1512,4),'linewidth',1,'y');
 hold on
 plot(xaxi,SUZB3LAST(1:1512,4),'linewidth',1,'c');
 legend('ITUB3','BBAS3','PETR4','VALE3','MGLU3','SUZB3','location','northwest')
-title('Ativos de 01/02/2016 à 11/03/2022')
-xlabel('dias');ylabel('preço')
+title('Ativos de 01/02/2016 Ã  11/03/2022')
+xlabel('dias');ylabel('preÃ§o')
 axis([0,1550])
 
 figure
@@ -49,7 +49,7 @@ plot(distribuicao(:,1),distribuicao(:,2),'k')
 set(gca, 'FontSize', 15);
 axis([-0.1,0.1,0,250])
 title('ITUB3')
-ylabel('nº de dias')
+ylabel('nÂº de dias')
 grid
 subplot(232)
 plot(distribuicao(:,1),distribuicao(:,3),'k')
@@ -68,7 +68,7 @@ plot(distribuicao(:,1),distribuicao(:,5),'k')
 set(gca, 'FontSize', 15);
 axis([-0.1,0.1,0,250])
 title('VALE3')
-ylabel('nº de dias')
+ylabel('nÂº de dias')
 xlabel('retorno')
 grid
 subplot(235)
@@ -182,7 +182,7 @@ endfor
 
 
 scatter(Portifolios(:,ativos+3),Portifolios(:,ativos+2),[],Portifolios(:,ativos+4),'filled')%plot(Portifolios(:,ativos+3),Portifolios(:,ativos+2),'d','linewidth',2)
-colorbar("ylabel","índice Sharpe","FontSize",15)
+colorbar("ylabel","Ã­ndice Sharpe","FontSize",15)
 colormap cool
 set(gca, 'FontSize', 15);
 hold on
@@ -229,4 +229,4 @@ text(FE(1,length(FE)/2)+0.08,FE(2,length(FE)/2)+0.25,'\bf Fronteira Eficiente','
 axis([0.15,0.75])
 xlabel('risco');
 ylabel('retorno');
-%legend('potifólios')%'% iguais','Max. Sharpe','Min. Risco');
+%legend('potifÃ³lios')%'% iguais','Max. Sharpe','Min. Risco');
