@@ -18,7 +18,7 @@
 !       semente random number
         call sgrnd(1321554)!31167285
 
-!       Carregando arquivos do histórico de preços
+!       Carregando arquivos do histÃ³rico de preÃ§os
 
         OPEN(14, FILE="ITUB3LAST.txt", status="old")
         OPEN(15, FILE="BBAS3LAST.txt", status="old")
@@ -32,7 +32,7 @@
         open(13,file='Portifolios.dat')
         open(10,file='distribuicao.dat')
 
-!       parâmetros de entrada
+!       parÃ¢metros de entrada
         NA1 = 10000
         DiasAtivo = 1512
         Ativos = 6
@@ -74,7 +74,7 @@
 
 
 !%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-!       Distribuição dos retornos
+!       DistribuiÃ§Ã£o dos retornos
         Distri = 0.0
         do l = 1,Ativos
         proDis = -0.15-passodi
@@ -102,7 +102,7 @@
         enddo
 
 
-!       Escrevendo retorno e distribuição em arquivo
+!       Escrevendo retorno e distribuiÃ§Ã£o em arquivo
         do i = 1,DiasAtivo-1
         write(12,*)retornoD(i,1),retornoD(i,2), &
                    retornoD(i,3),retornoD(i,4), &
@@ -121,7 +121,7 @@
 
 
 
-!       DESVIO PADR¶O
+!       DESVIO PADRÂ¶O
         do j = 1,Ativos
         sum1 = 0.0
         do i = 1,(DiasAtivo-1)
@@ -172,7 +172,7 @@
         write(*,*)"============================"
 
 
-!       MC: Escolhendo aleatóriamente os portifólios
+!       MC: Escolhendo aleatÃ³riamente os portifÃ³lios
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 !       Porcentagens Iguais
 
@@ -228,12 +228,12 @@
         end do
 
 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!       Aleatórias
+!       AleatÃ³rias
 
         do na = 1,NA1
 
 !       CALCULANDO peso de cada ATIVO
-!       Escolhendo ordem dos ativos aleatóriamente
+!       Escolhendo ordem dos ativos aleatÃ³riamente
         vola = 0.0
         WVec = 0.0
         ISharpe = 0.0
@@ -305,7 +305,7 @@
 
 
         write(*,*)"============================"
-        write(*,*)"||  Retorno Médio diario,Anual   ||"
+        write(*,*)"||  Retorno MÃ©dio diario,Anual   ||"
         write(*,*)"============================"
 
         print *,'ITUB3 = ',MedRet(1,1),MedRet(1,1)*periodo,'||'
